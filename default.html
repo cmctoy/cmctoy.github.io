@@ -1,0 +1,40 @@
+<!doctype html>
+<html >
+	<head>
+		<title>CMC Toy</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!--[if gte IE 9]><!-->
+		<script src="matter/lib/decomp.js"></script>
+		<script src="matter/pathseg.js"></script>
+		<script src="matter/lodash.js"></script>
+		<script src="matter/path-data-polyfill.js"></script>
+		<script src="matter/matter.js"></script>
+		<script src="matter/lib/matter-wrap.js"></script>
+		<script src="car.js"></script>
+<!--><![endif]-->
+    
+    <style>
+      #button:hover{
+        opacity:0.7;
+      }
+    </style>
+	</head>
+  
+	<body>
+    <canvas id="car" style="position:fixed;width:100%;height:100%;"></canvas>
+    <button id="button" onclick="window.open('./index.html', '_self');" style="position:fixed;margin:auto;bottom:80px;right:0;left:0;width:200px;height:50px;font-size:large;box-sizing:border-box;text-align:center; border-radius:8px; background: #ff9900; border:0; z-index:999;cursor:pointer;color:white;">Enter</button>
+	</body>
+
+    <script>
+    if (/\.cn$/.test(window.location.host)) {
+      document.getElementById("button").innerHTML = "进入";
+    }
+    else {
+      document.getElementById("button").innerHTML = "Enter";
+    }
+    </script>
+  
+</html>
+
